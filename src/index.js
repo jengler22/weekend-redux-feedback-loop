@@ -16,11 +16,24 @@ const feelingType = (state = '', action) => {
       return state;
 }
 
+const understandingInfo = (state = '', action) => {
+
+    if(action.type === 'SET_UNDERSTANDING') {
+        return action.payload;
+    } else if (action.type === 'CLEAR_FORM') {
+        return '';
+    }
+      return state;
+}
+
+
+
 
 const storeInstance = createStore(
     combineReducers(
         {
             feelingType,
+            understandingInfo,
            
         }
     ),
