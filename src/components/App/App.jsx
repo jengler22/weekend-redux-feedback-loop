@@ -14,7 +14,33 @@ import './App.css';
 function App() {
 
   return (
-    <Header />
+    <div>
+    <Router>
+      <Header />
+
+      <Route exact path="/">
+        <Feeling />
+      </Route>
+
+      <Route exact path="/understanding">
+        <Understanding />
+      </Route>
+
+      <Route exact path="/support">
+        <Support />
+      </Route>
+
+      <Route exact path="/comments">
+        <Comments />
+      </Route>
+
+      <Route exact path="/review">
+        <Review />
+      </Route>
+
+     </Router>
+
+    </div>
     
 
   );
