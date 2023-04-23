@@ -22,7 +22,7 @@ function Feeling () {
     return(
         <>
 
-<h3>/////</h3>
+<h3>All the feels</h3>
             <form onSubmit={nextPage}>
                 <label htmlFor="feeling-type">.....</label><br />
                 <input id="feeling-type" value={feelingType} onChange={handleChange} type="text" />

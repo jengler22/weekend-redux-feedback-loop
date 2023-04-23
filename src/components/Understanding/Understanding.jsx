@@ -22,8 +22,15 @@ function Understanding () {
 
     return(
         <>
+          <h3>Understand?</h3>
+            <form onSubmit={nextPage}>
+                <label htmlFor="understanding-info">.....</label><br />
+                <input id="understanding-info" value={understandingInfo} onChange={handleChange} type="text" />
+                <input type="submit" value="Next" />
+            </form>
         
         </>
+        
     )
 }
 export default Understanding;
