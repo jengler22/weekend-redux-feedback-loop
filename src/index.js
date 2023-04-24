@@ -36,6 +36,16 @@ const supportType = (state = '', action) => {
       return state;
 }
 
+const addComments = (state = '', action) => {
+
+    if(action.type === 'SET_COMMENTS') {
+        return action.payload;
+    } else if (action.type === 'CLEAR_FORM') {
+        return '';
+    }
+      return state;
+}
+
 
 
 
@@ -45,6 +55,7 @@ const storeInstance = createStore(
             feelingType,
             understandingInfo,
             supportType,
+            addComments,
            
         }
     ),
