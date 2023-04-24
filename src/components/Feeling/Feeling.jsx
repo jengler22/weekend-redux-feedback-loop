@@ -25,7 +25,8 @@ function Feeling () {
 <h3>All the feels</h3>
             <form onSubmit={nextPage}>
                 <label htmlFor="feeling-type">.....</label><br />
-                <input id="feeling-type" value={feelingType} onChange={handleChange} type="text" />
+                <input id="feeling-type" value={feelingType} onChange={handleChange}
+                type="number" />
                 <input type="submit" value="Next" />
             </form>
         

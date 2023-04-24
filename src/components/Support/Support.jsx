@@ -24,7 +24,8 @@ function Support() {
         <h3>Support?</h3>
             <form onSubmit={nextPage}>
                 <label htmlFor="support-type">.....</label><br />
-                <input id="support-type" value={supportType} onChange={handleChange} type="text" />
+                <input id="support-type" value={supportType} onChange={handleChange}
+                type="number" />
                 <input type="submit" value="Next" />
             </form>
         </>

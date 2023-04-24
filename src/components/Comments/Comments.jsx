@@ -26,7 +26,8 @@ function Comments() {
         <h3>Tell us more</h3>
             <form onSubmit={nextPage}>
                 <label htmlFor="add-comments">.....</label><br />
-                <input id="add-commemts" value={addComments} onChange={handleChange} type="text" />
+                <input id="add-commemts" value={addComments} onChange={handleChange}
+                type="number" />
                 <input type="submit" value="Next" />
             </form>
         

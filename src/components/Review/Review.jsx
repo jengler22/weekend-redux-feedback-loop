@@ -16,7 +16,7 @@ function Review () {
             feelingType: feelingType,
             understandingInfo: understandingInfo,
             supportType: supportType,
-            addComments: addComments
+            addComments: addComments,
         
         }).then(response => {
             

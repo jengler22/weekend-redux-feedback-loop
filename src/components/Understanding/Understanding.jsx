@@ -25,7 +25,8 @@ function Understanding () {
           <h3>Understand?</h3>
             <form onSubmit={nextPage}>
                 <label htmlFor="understanding-info">.....</label><br />
-                <input id="understanding-info" value={understandingInfo} onChange={handleChange} type="text" />
+                <input id="understanding-info" value={understandingInfo} onChange={handleChange}
+                type="number" />
                 <input type="submit" value="Next" />
             </form>
         
