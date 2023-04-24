@@ -7,6 +7,7 @@ import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 import Header from '../Header/Header';
+import Success from '../Success/Success';
 import './App.css';
 
 
@@ -36,6 +37,10 @@ function App() {
 
       <Route exact path="/review">
         <Review />
+      </Route>
+
+      <Route exact path="/success">
+        <Success />
       </Route>
 
      </Router>
