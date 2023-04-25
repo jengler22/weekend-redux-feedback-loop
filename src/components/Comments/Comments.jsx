@@ -1,5 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { TextField, Button } from '@mui/material';
+import { Box } from '@mui/material';
+
 
 
 function Comments() {
@@ -23,13 +26,22 @@ function Comments() {
 
    return(
         <>
-        <h3>Tell us more</h3>
-            <form onSubmit={nextPage}>
-                <label htmlFor="add-comments">.....</label><br />
-                <input id="add-commemts" value={addComments} onChange={handleChange}
-                type="number" />
-                <input type="submit" value="Next" />
-            </form>
+        <Box sx={{ p: 2 }}>
+  <h3>Anything else you would like us to know?</h3>
+  <form onSubmit={nextPage}>
+    <TextField
+      sx={{ mr: 2 }}
+      id="add-comments"
+      label="Add comments here"
+      value={addComments}
+      onChange={handleChange}
+      type="text"
+    />
+    <Button variant="contained" type="submit">
+      Next
+    </Button>
+  </form>
+</Box>
         
         </>
     )

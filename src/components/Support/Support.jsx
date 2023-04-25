@@ -1,5 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { TextField, Button } from '@mui/material';
+import { Box } from '@mui/material';
+
 
 function Support() {
     const history = useHistory();
@@ -21,13 +24,22 @@ function Support() {
 
     return (
         <>
-        <h3>Support?</h3>
-            <form onSubmit={nextPage}>
-                <label htmlFor="support-type">.....</label><br />
-                <input id="support-type" value={supportType} onChange={handleChange}
-                type="number" />
-                <input type="submit" value="Next" />
-            </form>
+        <Box sx={{ p: 2 }}>
+  <h3>Do you feel your Agent provided enough support during your claim?</h3>
+  <form onSubmit={nextPage}>
+    <TextField
+      sx={{ mr: 2 }}
+      id="support-type"
+      label="Please rate 1-5"
+      value={supportType}
+      onChange={handleChange}
+      type="number"
+    />
+    <Button variant="contained" type="submit">
+      Next
+    </Button>
+  </form>
+</Box>
         </>
     )
 }

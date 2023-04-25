@@ -1,5 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { TextField, Button } from '@mui/material';
+import { Box } from '@mui/material';
 
 function Feeling () {
     const history = useHistory();
@@ -22,14 +24,22 @@ function Feeling () {
     return(
         <>
 
-<h3>All the feels</h3>
-            <form onSubmit={nextPage}>
-                <label htmlFor="feeling-type">.....</label><br />
-                <input id="feeling-type" value={feelingType} onChange={handleChange}
-                type="number" />
-                <input type="submit" value="Next" />
-            </form>
-        
+<Box sx={{ p: 2 }}>
+  <h3>How do you feel about todays interaction?</h3>
+  <form onSubmit={nextPage}>
+    <TextField
+      sx={{ mr: 2 }}
+      id="feeling-type"
+      label="Please rate 1-5"
+      value={feelingType}
+      onChange={handleChange}
+      type="number"
+    />
+    <Button variant="contained" type="submit">
+      Next
+    </Button>
+  </form>
+</Box>
         </>
     )
 }

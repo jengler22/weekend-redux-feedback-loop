@@ -1,5 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { TextField, Button } from '@mui/material';
+import { Box } from '@mui/material';
+
 
 function Understanding () {
     const history = useHistory();
@@ -22,13 +25,22 @@ function Understanding () {
 
     return(
         <>
-          <h3>Understand?</h3>
-            <form onSubmit={nextPage}>
-                <label htmlFor="understanding-info">.....</label><br />
-                <input id="understanding-info" value={understandingInfo} onChange={handleChange}
-                type="number" />
-                <input type="submit" value="Next" />
-            </form>
+          <Box sx={{ p: 2 }}>
+  <h3>How well did your Agent explain the situation and your options?</h3>
+  <form onSubmit={nextPage}>
+    <TextField
+      sx={{ mr: 2 }}
+      id="understanding-info"
+      label="Please rate 1-5"
+      value={understandingInfo}
+      onChange={handleChange}
+      type="number"
+    />
+    <Button variant="contained" type="submit">
+      Next
+    </Button>
+  </form>
+</Box>
         
         </>
         

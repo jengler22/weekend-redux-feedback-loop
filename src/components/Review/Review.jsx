@@ -2,6 +2,8 @@ import { useSelector} from "react-redux";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import axios from "axios";
+import { Box, Button, Typography } from '@mui/material';
+
 
 function Review () {
 
@@ -13,10 +15,10 @@ function Review () {
 
     const sendToServer = () => {
         axios.post('/feedback', {
-            feelingType: feelingType,
-            understandingInfo: understandingInfo,
-            supportType: supportType,
-            addComments: addComments,
+            feeling: feelingType,
+            understanding: understandingInfo,
+            support: supportType,
+            comments: addComments,
         
         }).then(response => {
             
@@ -30,12 +32,16 @@ function Review () {
 
     return(
         <>
-         <h3>Review</h3>
-        <div>{feelingType}</div>
-        <div>{understandingInfo}</div>
-        <div>{supportType}</div>
-        <div>{addComments}</div>
-        <button onClick={sendToServer}>Submit</button>
+          <Box sx={{ maxWidth: 600, mx: 'auto', px: 2 }}>
+      <Typography variant="h3" gutterBottom>Review</Typography>
+      <Typography variant="body1" gutterBottom>How you feel: {feelingType}</Typography>
+      <Typography variant="body1" gutterBottom>Understanding material: {understandingInfo}</Typography>
+      <Typography variant="body1" gutterBottom>Team support: {supportType}</Typography>
+      <Typography variant="body1" gutterBottom>Additional comments: {addComments}</Typography>
+      <Box sx={{ mt: 2 }}>
+        <Button variant="contained" onClick={sendToServer}>Submit</Button>
+      </Box>
+    </Box>
         </>
     )
 }
