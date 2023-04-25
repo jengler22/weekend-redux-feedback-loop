@@ -34,9 +34,9 @@ function Review () {
         <>
           <Box sx={{ maxWidth: 600, mx: 'auto', px: 2 }}>
       <Typography variant="h3" gutterBottom>Review</Typography>
-      <Typography variant="body1" gutterBottom>How you feel: {feelingType}</Typography>
-      <Typography variant="body1" gutterBottom>Understanding material: {understandingInfo}</Typography>
-      <Typography variant="body1" gutterBottom>Team support: {supportType}</Typography>
+      <Typography variant="body1" gutterBottom>Overall Feelings: {feelingType}</Typography>
+      <Typography variant="body1" gutterBottom>Understanding of policy: {understandingInfo}</Typography>
+      <Typography variant="body1" gutterBottom>Support recived from Agent: {supportType}</Typography>
       <Typography variant="body1" gutterBottom>Additional comments: {addComments}</Typography>
       <Box sx={{ mt: 2 }}>
         <Button variant="contained" onClick={sendToServer}>Submit</Button>
