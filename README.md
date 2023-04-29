@@ -1,9 +1,22 @@
 # Project Name
+Insurance Agency Customer Feedback Form
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
 
 ## Description
+In this project, I created a customer feedback form for an insurance agency.
+The feedback for asks 4 questions about the customers recent interaction with thier agent.
+After the questions are cpmplete, the user will see a review page displaying the respective input.
+Last, the customer will see a thank you page.
 
-Your project description goes here. What problem did you solve? How did you solve it?
+Upon submit, all data is stored in a database for future reference.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+## Preview
+![screenshot](./public/images/step1.png)
+![screenshot](./public/images/step2.png)
+![screenshot](./public/images/step3.png)
+![screenshot](./public/images/step4.png)
+![screenshot](./public/images/step5.png)
+![screenshot](./public/images/step6.png)
+
+
+
