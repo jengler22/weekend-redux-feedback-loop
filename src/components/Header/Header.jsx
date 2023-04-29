@@ -7,11 +7,11 @@ function Header () {
         <>
         <AppBar position="static">
       <Toolbar>
-        <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-          PRIME INSURANCE!
+        <Typography variant="h5" component="div" sx={{ flexGrow: 2 }}>
+          PRIME INSURANCE
         </Typography>
-        <Typography variant="subtitle1" sx={{ mr: 1 }}>
-          Customer feedback form
+        <Typography variant="subtitle1" sx={{ mr: 2 }}>
+          Customer Feedback Form
         </Typography>
       </Toolbar>
     </AppBar>

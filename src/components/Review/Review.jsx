@@ -2,7 +2,7 @@ import { useSelector} from "react-redux";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import axios from "axios";
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, TextField, Typography } from '@mui/material';
 
 
 function Review () {
@@ -32,17 +32,54 @@ function Review () {
 
     return(
         <>
-          <Box sx={{ maxWidth: 600, mx: 'auto', px: 2 }}>
-      <Typography variant="h3" gutterBottom>Review</Typography>
-      <Typography variant="body1" gutterBottom>Overall Feelings: {feelingType}</Typography>
-      <Typography variant="body1" gutterBottom>Understanding of policy: {understandingInfo}</Typography>
-      <Typography variant="body1" gutterBottom>Support recived from Agent: {supportType}</Typography>
-      <Typography variant="body1" gutterBottom>Additional comments: {addComments}</Typography>
-      <Box sx={{ mt: 2 }}>
-        <Button variant="contained" onClick={sendToServer}>Submit</Button>
+        <Box sx={{ maxWidth: 800, mx: "auto", px: 10 }}>
+        <Typography variant="h3" gutterBottom>
+          Review
+        </Typography>
+        <Box sx={{ my: 2 }}>
+          <TextField
+            fullWidth
+            id="outlined-basic-feelings"
+            label="Overall Feelings"
+            variant="outlined"
+            value={feelingType}
+          />
+        </Box>
+        <Box sx={{ my: 2 }}>
+          <TextField
+            fullWidth
+            id="outlined-basic-understanding"
+            label="Understanding of policy"
+            variant="outlined"
+            value={understandingInfo}
+          />
+        </Box>
+        <Box sx={{ my: 2 }}>
+          <TextField
+            fullWidth
+            id="outlined-basic-support"
+            label="Support received from Agent"
+            variant="outlined"
+            value={supportType}
+          />
+        </Box>
+        <Box sx={{ my: 2 }}>
+          <TextField
+            fullWidth
+            id="outlined-basic-comments"
+            label="Additional comments"
+            variant="outlined"
+            value={addComments}
+          />
+        </Box>
+        <Box sx={{ my: 2 }}>
+          <Button variant="contained" onClick={sendToServer}>
+            Submit
+          </Button>
+        </Box>
       </Box>
-    </Box>
-        </>
-    )
+    </>
+  );
 }
+
 export default Review;

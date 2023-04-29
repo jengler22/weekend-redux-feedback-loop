@@ -26,11 +26,11 @@ function Comments() {
 
    return(
         <>
-        <Box sx={{ p: 2 }}>
+        <Box sx={{ p: 10 }}>
   <h3>Anything else you would like us to know?</h3>
   <form onSubmit={nextPage}>
     <TextField
-      sx={{ mr: 2 }}
+      sx={{ mr: 5 }}
       id="add-comments"
       label="Add comments here"
       value={addComments}

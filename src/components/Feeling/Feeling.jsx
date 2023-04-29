@@ -24,11 +24,11 @@ function Feeling () {
     return(
         <>
 
-<Box sx={{ p: 2 }}>
+<Box sx={{ p: 10 }}>
   <h3>How do you feel about todays interaction?</h3>
   <form onSubmit={nextPage}>
     <TextField
-      sx={{ mr: 2 }}
+      sx={{ mr: 5 }}
       id="feeling-type"
       label="Please rate 1-5"
       value={feelingType}

@@ -24,11 +24,11 @@ function Support() {
 
     return (
         <>
-        <Box sx={{ p: 2 }}>
+        <Box sx={{ p: 10 }}>
   <h3>Do you feel your Agent provided enough support during your claim?</h3>
   <form onSubmit={nextPage}>
     <TextField
-      sx={{ mr: 2 }}
+      sx={{ mr: 5 }}
       id="support-type"
       label="Please rate 1-5"
       value={supportType}

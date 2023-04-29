@@ -25,11 +25,11 @@ function Understanding () {
 
     return(
         <>
-          <Box sx={{ p: 2 }}>
+          <Box sx={{ p: 10 }}>
   <h3>How well did your Agent explain the situation and your options?</h3>
   <form onSubmit={nextPage}>
     <TextField
-      sx={{ mr: 2 }}
+      sx={{ mr: 5 }}
       id="understanding-info"
       label="Please rate 1-5"
       value={understandingInfo}
